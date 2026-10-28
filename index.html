@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <form>
+        <h2>Formulario de Inscripción Curso</h2>
+        <p>Rellene cuidadosamente el formulario de inscripción</p>
+        <h3>Nombre del alumno</h3>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required><br>
+        <label for="segundo">Segundo Nombre</label>
+        <input type="text" id="segundo" name="segundo"><br>
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" name="apellido" required>
+        
+        <h3>Fecha de nacimiento</h3>
+        <input type="date" id="fecha" name="fecha" required>
+        <label for="fecha">Fecha</label><br>
+        <h3>Género</h3><br>
+        <select id="genero" name="genero">
+        <option value="">Seleccione</option>
+        <option value="masculino">Masculino</option>
+        <option value="femenino">Femenino</option>
+        <option value="otro">Otro</option>
+        </select><br>
+        <h3>Dirección</h3>
+        <label for="direccion">Dirección de la calle</label><br>
+        <input type="text" id="direccion" name="direccion"><br>
+        <label for="direccion2">Dirección de la calle Línea 2</label><br>
+        <input type="text" id="direccion2" name="direccion2"><br>
+        <label for="ciudad">Ciudad</label> 
+        <label for="provincia">Estado / Provincia</label><br>
+        <input type="text" id="ciudad" name="ciudad">
+        <input type="text" id="provincia" name="provincia"><br>
+        <label for="postal">Código Postal</label>
+        <input type="text" id="postal" name="postal">
+        <h3>Email</h3>
+        <input type="email" id="email" name="email" required>
+        <h3>Número de teléfono</h3>
+        <input type="tel" id="telefono" name="telefono"><br>
+        <h3>Ha recibido otros cursos anteriormente</h3>
+        <input type="radio" id="si" name="otros_cursos" value="si">
+        <label for="si">Sí</label>
+        <input type="radio" id="no" name="otros_cursos" value="no">
+        <label for="no">No</label><br>
+        <h3>Empresa</h3>
+        <input type="text" id="empresa" name="empresa">
+        <h3>Cursos</h3>
+        <select id="curso" name="curso">
+            <option value="">Seleccione un curso</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="programacion">Programación</option>
+        </select>
+        <h3>Comentarios adicionales</h3>
+        <textarea id="comentarios" name="comentarios" rows="4" cols="40"></textarea>
+        <br><br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+
+</html>

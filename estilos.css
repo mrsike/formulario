@@ -1,0 +1,297 @@
+
+/* =====================================
+   ESTILOS GENERALES
+===================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f3ef;
+    color: #222;
+    font-size: 12px;
+    padding: 6px 0;
+}
+
+/* =====================================
+   FORMULARIO PRINCIPAL
+===================================== */
+
+form {
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 18px 27px 12px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+}
+
+/* =====================================
+   TITULO Y DESCRIPCION
+===================================== */
+
+form h2 {
+    color: #18283e;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+form > p {
+    text-align: center;
+    font-size: 10px;
+    margin-bottom: 20px;
+}
+
+/* =====================================
+   SUBTITULOS
+===================================== */
+
+form h3 {
+    font-size: 11px;
+    font-weight: normal;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    color: #222;
+}
+
+/* =====================================
+   CAMPOS GENERALES
+===================================== */
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: #222;
+    background-color: #fff;
+    border: 1px solid #777d80;
+    border-radius: 4px;
+    padding: 5px;
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #168fba;
+}
+
+/* =====================================
+   NOMBRE DEL ALUMNO
+===================================== */
+
+#nombre,
+#segundo,
+#apellido {
+    display: inline-block;
+    width: 32%;
+    height: 21px;
+    margin-right: 1%;
+    vertical-align: top;
+}
+
+#apellido {
+    margin-right: 0;
+}
+
+/* =====================================
+   FECHA DE NACIMIENTO Y GENERO
+===================================== */
+
+.fila-fecha-genero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    width: 100%;
+    align-items: start;
+}
+
+.campo-fecha,
+.campo-genero {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.campo-fecha h3,
+.campo-genero h3 {
+    margin-top: 12px;
+    margin-bottom: 5px;
+}
+
+.campo-fecha input,
+.campo-genero select {
+    width: 100%;
+    height: 22px;
+    min-width: 0;
+}
+
+.campo-fecha label {
+    font-size: 9px;
+    margin-top: 5px;
+}
+
+/* =====================================
+   DIRECCION
+===================================== */
+
+#direccion,
+#direccion2 {
+    display: block;
+    width: 100%;
+    height: 21px;
+    margin-bottom: 5px;
+}
+
+/* =====================================
+   CIUDAD Y PROVINCIA
+===================================== */
+
+#ciudad,
+#provincia {
+    display: inline-block;
+    width: 49%;
+    height: 21px;
+    vertical-align: top;
+    margin-bottom: 5px;
+}
+
+#provincia {
+    float: right;
+}
+
+/* =====================================
+   CODIGO POSTAL
+===================================== */
+
+#postal {
+    display: block;
+    width: 20%;
+    height: 21px;
+}
+
+/* =====================================
+   EMAIL Y TELEFONO
+===================================== */
+
+#email,
+#telefono {
+    display: inline-block;
+    width: 49%;
+    height: 21px;
+    vertical-align: top;
+}
+
+#telefono {
+    float: right;
+}
+
+/* =====================================
+   CURSOS ANTERIORES
+===================================== */
+
+input[type="radio"] {
+    width: 11px;
+    height: 11px;
+    vertical-align: middle;
+    margin-right: 4px;
+    accent-color: #168f55;
+}
+
+label[for="si"],
+label[for="no"] {
+    font-size: 11px;
+    margin-right: 10px;
+}
+
+/* =====================================
+   EMPRESA Y CURSOS
+===================================== */
+
+#empresa,
+#curso {
+    display: inline-block;
+    width: 49%;
+    height: 21px;
+    vertical-align: top;
+}
+
+#curso {
+    float: right;
+}
+
+/* =====================================
+   COMENTARIOS ADICIONALES
+===================================== */
+
+#comentarios {
+    display: block;
+    width: 100%;
+    height: 41px;
+    resize: vertical;
+    margin-top: 2px;
+}
+
+/* =====================================
+   BOTON ENVIAR
+===================================== */
+
+input[type="submit"] {
+    display: block;
+    width: 100px;
+    height: 23px;
+    margin: 12px auto 0;
+    background-color: #18b765;
+    color: white;
+    font-size: 11px;
+    font-weight: 500;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #129b53;
+}
+
+/* =====================================
+   LIMPIAR ELEMENTOS FLOTANTES
+===================================== */
+
+form::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* =====================================
+   ADAPTACION PARA MOVILES
+===================================== */
+
+@media (max-width: 450px) {
+    form {
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #nombre,
+    #segundo,
+    #apellido {
+        width: 31.5%;
+    }
+
+    .fila-fecha-genero {
+        gap: 10px;
+    }
+}
